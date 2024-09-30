@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+  crudlite_app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: crudliteApp
+    ports:
+      - "3500:80"
+    depends_on:
+      - database
+
+  database:
+    image: mariadb
+    container_name: crudliteBD
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: crudlitesystem
+      MYSQL_USER: crudlite
+      MYSQL_PASSWORD: crudlite
+    ports:
+      - "33060:3306"
+    volumes:
+      - db-volume:/var/lib/mysql
+      - ./others/bd.sql:/docker-entrypoint-initdb.d/bd.sql
+
+volumes:
+  db-volume:
