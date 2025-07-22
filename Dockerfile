@@ -2,7 +2,8 @@
 FROM php:8.2-apache
 
 # Instalar extensiones necesarias (por ejemplo, mysqli)
-RUN docker-php-ext-install mysqli
+# RUN docker-php-ext-install mysqli
+ RUN docker-php-ext-install pdo pdo_mysql
 
 # Establecer el directorio de trabajo dentro del contenedor
 WORKDIR /var/www/html
