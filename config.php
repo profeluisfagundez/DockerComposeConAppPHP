@@ -7,10 +7,10 @@ $dbname = "crudlitesystem"; // nombre de la base de datos definido en docker-com
 
 /*
 // Conexión para trabajar local
-$servername = "localhost";
-$username = "root";
-$password = "root";
-$dbname = "crudlitesystem";
+$servername = "localhost"; //nombre del servicio en XAMPP
+$username = "root"; //Usuario que se usa en XAMPP
+$password = "root"; //Si usan XAMPP esta parte va vacía
+$dbname = "crudlitesystem"; //nombre de la base de datos
 */
 
 try {
