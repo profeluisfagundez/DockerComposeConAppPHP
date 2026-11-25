@@ -1,5 +1,5 @@
 # Usar la imagen base de PHP con Apache
-FROM php:8.2-apache
+FROM php:8.4-apache
 
 # Instalar extensiones necesarias (por ejemplo, mysqli)
 # RUN docker-php-ext-install mysqli
